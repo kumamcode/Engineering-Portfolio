@@ -1,5 +1,23 @@
 import { Project } from '@/types';
 
+// Project display order - change the order of IDs here to change display order
+// Projects not in this array will appear at the end
+export const projectOrder: string[] = [
+  '14', // Fixed-Wing VTOL Hybrid Drone
+  '1',  // 3D Printed Quadcopter
+  '3',  // Tennsi Ball Grasping Robot
+  '4',  // Autonomous Plant Care System
+  '9',  // Portable Thermoregulated Capsule
+  '5',  // Crank Shaft CAD Design
+  '2',  // Augmented Cane
+  '7',  // Amateur Architecture
+  '8',  // Water Demand Model
+  '10', // Woodworking Projects
+  '11', // NBA Analysis
+  '12', // Automated Stock Market Analysis Bot
+  '13', // Engineering Portfolio Website
+];
+
 export const projects: Project[] = [
   // Robotics Projects
   {
@@ -12,14 +30,13 @@ Developed in collaboration with Project CETI, the system integrates antenna sepa
 
 This work is ongoing as part of my undergraduate thesis, with continued validation through simulation, testing, and flight experiments.`,
     images: [
+      '/projects/Fixed_Wing_VTOL_Drone/View_8.png',
       '/projects/Fixed_Wing_VTOL_Drone/view_1.JPG',
       '/projects/Fixed_Wing_VTOL_Drone/view_2.png',
       '/projects/Fixed_Wing_VTOL_Drone/View_3.png',
       '/projects/Fixed_Wing_VTOL_Drone/View_4.png',
-      '/projects/Fixed_Wing_VTOL_Drone/View_5.png',
       '/projects/Fixed_Wing_VTOL_Drone/View_6.png',
       '/projects/Fixed_Wing_VTOL_Drone/View_7.png',
-      '/projects/Fixed_Wing_VTOL_Drone/View_8.png',
       '/projects/Fixed_Wing_VTOL_Drone/View_9.png',
       '/projects/Fixed_Wing_VTOL_Drone/DSC00433.JPG',
       '/projects/Fixed_Wing_VTOL_Drone/DSC00493.JPG',
@@ -47,7 +64,7 @@ This work is ongoing as part of my undergraduate thesis, with continued validati
     id: '2',
     title: 'Augmented Cane',
     category: 'Robotics',
-    description: 'Enhanced walking cane with sensor integration and assistive technology features.',
+    description: 'Designed an augmented cane attachment prototype to provide haptic feedback to the cane user as an undergraduate researcher at the Harvard Ability Lab.',
     images: [
       '/projects/Augmented_Cane/isometric_view.png',
       '/projects/Augmented_Cane/exploded_view.png',
@@ -78,7 +95,7 @@ Our design features a claw and arm mechanism I developed to interface with the p
     id: '4',
     title: 'Autonomous Plant Care System',
     category: 'Robotics',
-    description: 'Automated plant monitoring and care system with sensor integration and control algorithms.',
+    description: 'Designed, fabricated, and programmed an autonomous plant care system utilizing an Arduino MKR zero, soil moisture sensor neopixels, liquid-crystal display, and 3V submersible pump. The mechanical design was done using Solidworks and 3D printers while all of the circuit was built on two small breadboards that could be enclosed in the circuit holder. The design is completely modular. The project allowed me to develop my skills with design for assembly, circuitry, Arduino, and soldering.',
     images: [
       '/projects/Autonomous_Plant_Care_System/Screenshot_2024-04-28_at_5.58._16a7ba9134dd.png',
       '/projects/Autonomous_Plant_Care_System/Screenshot_2024-04-29_at_4.19._a3c2b9da6bc0.png',
@@ -91,7 +108,7 @@ Our design features a claw and arm mechanism I developed to interface with the p
     id: '9',
     title: 'Portable Thermoregulated Capsule',
     category: 'Mechanical Design',
-    description: 'Portable thermal regulation system design with temperature control mechanisms and capsule housing.',
+    description: 'Built a compact cold chain management device developed as part of a consulting project for Eli Lilly. It maintains internal temperatures within the required medical range for up to 1 hour & 15 minutes, ensuring the safe transport of temperature-sensitive medications. The capsule includes a built-in display for real-time temperature monitoring, providing reliable, user-friendly functionality for critical pharmaceutical applications.',
     images: [
       '/projects/Portable_Thermoregulated_Capsule/Screenshot_2025-04-28_at_2.51._76ead1b7184a.png',
       '/projects/Portable_Thermoregulated_Capsule/Screenshot_2025-05-13_at_5.47._9f3691c5ca96.png',
@@ -108,7 +125,7 @@ Our design features a claw and arm mechanism I developed to interface with the p
     id: '5',
     title: 'Crank Shaft CAD Design',
     category: 'CAD',
-    description: 'Detailed CAD modeling and engineering design of a crankshaft assembly with multiple view analysis.',
+    description: 'Modeled and assembled a crankshaft and piston system with CATIA V5.',
     images: [
       '/projects/Crank_Shaft_Cad/Screenshot_2024-06-20_163336_4634b2548cd5.png',
       '/projects/Crank_Shaft_Cad/Screenshot_2024-06-20_162422_988c5bf12316.png',
@@ -119,22 +136,10 @@ Our design features a claw and arm mechanism I developed to interface with the p
     date: '2024-06',
   },
   {
-    id: '6',
-    title: 'Bridge Design',
-    category: 'CAD',
-    description: 'Structural engineering and CAD design of a bridge with analysis views.',
-    images: [
-      '/projects/Bridge/Screenshot_2024-04-25_at_3.12._7b97b39fcdf9.png',
-      '/projects/Bridge/Screenshot_2024-04-25_at_3.17._f486f8b2e4a0.png',
-    ],
-    technologies: ['CAD', 'Structural Engineering', 'Design'],
-    date: '2024-04',
-  },
-  {
     id: '7',
     title: 'Amateur Architecture',
     category: 'CAD',
-    description: 'Architectural design project featuring a dream house with detailed 3D modeling and multiple views.',
+    description: 'Utilized architectural CAD techniques to design a 4-bedroom, 2-story home with a 2 car garage in SketchUp.',
     images: [
       '/projects/Amateur_Architecture/Dream_House_1_57ab34e31199.png',
       '/projects/Amateur_Architecture/Dream_House_1__11__465217c1f191.png',
@@ -163,9 +168,9 @@ Our design features a claw and arm mechanism I developed to interface with the p
   // Mechanical Design Projects
   {
     id: '10',
-    title: 'Woodworking Projects',
+    title: 'Coffee Table for Mother',
     category: 'Mechanical Design',
-    description: 'Custom furniture design and woodworking projects with detailed craftsmanship.',
+    description: 'Utilized woodworking techniques to design, and construct a beautiful Japanese-inspired coffee table out of dark walnut and cherry.',
     images: [
       '/projects/WoodWorking/table_1.png',
       '/projects/WoodWorking/table_2.png',
@@ -179,7 +184,9 @@ Our design features a claw and arm mechanism I developed to interface with the p
     id: '11',
     title: 'NBA Analysis',
     category: 'Data Analysis',
-    description: 'Statistical analysis and data visualization of NBA data using MATLAB with histograms, plots, and matrix analysis.',
+    description: `Utilized MATLAB and Python to conduct a multiple linear regression on NBA Player Data.
+                  Our goal was to determine which factors lead players to command a higher NBA salary.
+                  Ultimately, we had to eliminate some of our variables that exhibited collinearity and those which didn't improve our model's R² (coefficient of determination). We found that height and Instagram followers exhibited a strong positive correlation to NBA salary!`,
     images: [
       '/projects/NBA_Analysis/matlab.png',
       '/projects/NBA_Analysis/histogram.png',

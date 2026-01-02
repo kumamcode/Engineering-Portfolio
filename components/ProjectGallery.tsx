@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Lightbox from 'yet-another-react-lightbox';
 import 'yet-another-react-lightbox/styles.css';
 import { Project, ProjectCategory } from '@/types';
+import { projectOrder } from '@/data/projects';
 import StockBotDiagram from './StockBotDiagram';
 
 interface ProjectGalleryProps {
@@ -20,10 +21,35 @@ export default function ProjectGallery({ projects }: ProjectGalleryProps) {
   // Get unique categories
   const categories: ProjectCategory[] = ['All', ...Array.from(new Set(projects.map(p => p.category)))] as ProjectCategory[];
 
+  // Sort projects by projectOrder array
+  const sortProjects = (projectList: Project[]): Project[] => {
+    const projectMap = new Map(projectList.map(p => [p.id, p]));
+    const sorted: Project[] = [];
+    const unsorted: Project[] = [];
+    
+    // Add projects in the order specified by projectOrder
+    projectOrder.forEach(id => {
+      const project = projectMap.get(id);
+      if (project) {
+        sorted.push(project);
+        projectMap.delete(id);
+      }
+    });
+    
+    // Add any remaining projects that weren't in projectOrder
+    projectMap.forEach(project => unsorted.push(project));
+    
+    return [...sorted, ...unsorted];
+  };
+
   // Filter projects by category
   const filteredProjects = useMemo(() => {
-    if (selectedCategory === 'All') return projects;
-    return projects.filter(p => p.category === selectedCategory);
+    let filtered = selectedCategory === 'All' 
+      ? projects 
+      : projects.filter(p => p.category === selectedCategory);
+    
+    // Sort by projectOrder
+    return sortProjects(filtered);
   }, [projects, selectedCategory]);
 
   // Separate Stock Bot project when Software/AI is selected
