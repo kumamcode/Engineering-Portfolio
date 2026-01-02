@@ -226,5 +226,6 @@ Our design features a claw and arm mechanism I developed to interface with the p
     images: [], // You can add screenshots of the website later
     technologies: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'Responsive Design', 'Image Optimization'],
     date: '2025',
+    githubUrl: 'https://github.com/kumamcode/Engineering-Portfolio',
   },
 ];
