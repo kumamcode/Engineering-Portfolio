@@ -26,7 +26,7 @@ export const projects: Project[] = [
     category: 'Robotics',
     description: `This project focuses on the design and development of an autonomous fixed-wing VTOL hybrid drone for tracking VHF-tagged sperm whales in harsh marine environments.
 
-Developed in collaboration with Project CETI, the system integrates antenna separation directly into the airframe to improve signal detection while significantly increasing flight endurance compared to traditional quadcopters. The drone is designed for waterproof operation, compact deployment from small research vessels, and autonomous takeoff, landing, and tracking.
+Developed in collaboration with Project CETI and the Robotics, Embedded-Autonomy, and Communication Theory(REACT) Lab, the system integrates antenna separation directly into the airframe to improve signal detection while significantly increasing flight endurance compared to traditional quadcopters. The drone is designed for waterproof operation, compact deployment from small research vessels, and autonomous takeoff, landing, and tracking.
 
 This work is ongoing as part of my undergraduate thesis, with continued validation through simulation, testing, and flight experiments.`,
     images: [

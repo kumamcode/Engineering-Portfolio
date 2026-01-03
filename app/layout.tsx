@@ -13,7 +13,22 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="antialiased bg-gray-50">
+      <body className="antialiased bg-gray-50 dark:bg-neutral-900">
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                const stored = localStorage.getItem('darkMode');
+                const shouldBeDark = stored ? stored === 'true' : true;
+                if (shouldBeDark) {
+                  document.documentElement.classList.add('dark');
+                } else {
+                  document.documentElement.classList.remove('dark');
+                }
+              })();
+            `,
+          }}
+        />
         {children}
       </body>
     </html>

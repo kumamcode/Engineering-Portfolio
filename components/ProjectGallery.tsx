@@ -96,7 +96,7 @@ export default function ProjectGallery({ projects }: ProjectGalleryProps) {
     return (
       <div
         key={project.id}
-        className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300"
+        className="bg-white dark:bg-neutral-800 rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300"
       >
         {/* First Image as Thumbnail */}
         {project.images[0] && (
@@ -127,19 +127,19 @@ export default function ProjectGallery({ projects }: ProjectGalleryProps) {
         {/* Project Info */}
         <div className="p-4">
           <div className="flex items-center justify-between mb-2">
-            <h3 className="text-xl font-bold text-gray-800">{project.title}</h3>
-            <span className="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded">
+            <h3 className="text-xl font-bold text-gray-800 dark:text-white">{project.title}</h3>
+            <span className="text-xs bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 px-2 py-1 rounded">
               {project.category}
             </span>
           </div>
-          <p className="text-gray-600 text-sm mb-3">{project.description}</p>
+          <p className="text-gray-600 dark:text-gray-300 text-sm mb-3">{project.description}</p>
           
           {project.technologies && project.technologies.length > 0 && (
             <div className="flex flex-wrap gap-2 mb-3">
               {project.technologies.map(tech => (
                 <span
                   key={tech}
-                  className="text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded"
+                  className="text-xs bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-2 py-1 rounded"
                 >
                   {tech}
                 </span>
@@ -154,7 +154,7 @@ export default function ProjectGallery({ projects }: ProjectGalleryProps) {
                 href={project.githubUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-sm font-medium text-blue-600 hover:text-blue-800 hover:underline"
+                className="inline-flex items-center gap-2 text-sm font-medium text-green-600 dark:text-green-400 hover:text-green-800 dark:hover:text-green-300 hover:underline"
               >
                 <svg
                   className="w-5 h-5"
@@ -179,7 +179,7 @@ export default function ProjectGallery({ projects }: ProjectGalleryProps) {
               {project.images.slice(1, 4).map((img, imgIndex) => (
                 <div
                   key={imgIndex}
-                  className="relative w-16 h-16 flex-shrink-0 cursor-pointer rounded overflow-hidden border-2 border-gray-200 hover:border-blue-500 transition-colors"
+                  className="relative w-16 h-16 flex-shrink-0 cursor-pointer rounded overflow-hidden border-2 border-gray-200 dark:border-gray-600 hover:border-green-500 dark:hover:border-green-400 transition-colors"
                   onClick={() => prepareLightboxImages(actualIndex, imgIndex + 1)}
                 >
                   <Image
@@ -192,7 +192,7 @@ export default function ProjectGallery({ projects }: ProjectGalleryProps) {
                 </div>
               ))}
               {project.images.length > 4 && (
-                <div className="w-16 h-16 flex-shrink-0 bg-gray-100 rounded flex items-center justify-center text-xs text-gray-600 border-2 border-gray-200">
+                <div className="w-16 h-16 flex-shrink-0 bg-gray-100 dark:bg-gray-700 rounded flex items-center justify-center text-xs text-gray-600 dark:text-gray-300 border-2 border-gray-200 dark:border-gray-600">
                   +{project.images.length - 4}
                 </div>
               )}
@@ -211,10 +211,10 @@ export default function ProjectGallery({ projects }: ProjectGalleryProps) {
           <button
             key={category}
             onClick={() => setSelectedCategory(category)}
-            className={`px-6 py-2 rounded-full font-medium transition-all duration-200 ${
+            className={`px-6 py-2 rounded font-medium transition-all duration-200 ${
               selectedCategory === category
-                ? 'bg-blue-600 text-white shadow-lg'
-                : 'bg-white text-gray-700 hover:bg-gray-100 shadow'
+                ? 'bg-green-600 dark:bg-green-500 text-white shadow-lg'
+                : 'bg-white dark:bg-neutral-800 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-neutral-700 shadow'
             }`}
           >
             {category}
@@ -229,7 +229,7 @@ export default function ProjectGallery({ projects }: ProjectGalleryProps) {
           {renderProjectCard(stockBotProject, 0, filteredProjects)}
 
           {/* Right Column: Diagram */}
-          <div className="bg-white rounded-lg shadow-md">
+          <div className="bg-white dark:bg-neutral-800 rounded-lg shadow-md">
             <StockBotDiagram />
           </div>
         </div>
@@ -252,7 +252,7 @@ export default function ProjectGallery({ projects }: ProjectGalleryProps) {
       />
 
       {filteredProjects.length === 0 && (
-        <div className="text-center py-12 text-gray-500">
+        <div className="text-center py-12 text-gray-500 dark:text-gray-400">
           No projects found in this category.
         </div>
       )}
