@@ -28,7 +28,7 @@ export const projects: Project[] = [
 
 Developed in collaboration with Project CETI and the Robotics, Embedded-Autonomy, and Communication Theory(REACT) Lab, the system integrates antenna separation directly into the airframe to improve signal detection while significantly increasing flight endurance compared to traditional quadcopters. The drone is designed for waterproof operation, compact deployment from small research vessels, and autonomous takeoff, landing, and tracking.
 
-This work is ongoing as part of my undergraduate thesis, with continued validation through simulation, testing, and flight experiments.`,
+This work was completed as part of my undergraduate thesis at Harvard.`,
     images: [
       '/projects/Fixed_Wing_VTOL_Drone/sexy_render.jpg',
       '/projects/Fixed_Wing_VTOL_Drone/outdoor.png',
@@ -38,6 +38,10 @@ This work is ongoing as part of my undergraduate thesis, with continued validati
       '/projects/Fixed_Wing_VTOL_Drone/wing_pressure_CFD.png',
       '/projects/Fixed_Wing_VTOL_Drone/Velocity_flow_trajectory.png',
       '/projects/Fixed_Wing_VTOL_Drone/outdoor_docked.png',
+    ],
+    links: [
+      { label: 'Presentation (PDF)', href: '/projects/Fixed_Wing_VTOL_Drone/ES100_FINAL_PRESENTATION_PDF.pdf' },
+      { label: 'Thesis (PDF)', href: '/projects/Fixed_Wing_VTOL_Drone/ES100_final_submission_apr2_843pm.pdf' },
     ],
     technologies: ['Autonomous Systems', 'Aerospace Engineering', 'VTOL', 'CAD', 'CFD Simulation', 'AeroSandbox', 'OpenVSP'],
     date: '2025',

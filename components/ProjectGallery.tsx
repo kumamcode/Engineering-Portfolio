@@ -147,6 +147,23 @@ export default function ProjectGallery({ projects }: ProjectGalleryProps) {
             </div>
           )}
 
+          {/* Project Links */}
+          {project.links && project.links.length > 0 && (
+            <div className="mt-3 mb-3 grid w-full grid-cols-2 gap-2">
+              {project.links.map(link => (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex w-full items-center justify-center rounded bg-green-600 dark:bg-green-500 px-3 py-2 text-sm font-medium text-white hover:bg-green-700 dark:hover:bg-green-400 transition-colors"
+                >
+                  {link.label}
+                </a>
+              ))}
+            </div>
+          )}
+
           {/* GitHub Link */}
           {project.githubUrl && (
             <div className="mt-3 mb-3">

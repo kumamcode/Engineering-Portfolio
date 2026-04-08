@@ -9,5 +9,6 @@ export interface Project {
   technologies?: string[];
   date?: string;
   githubUrl?: string; // GitHub repository URL
+  links?: Array<{ label: string; href: string }>;
 }
 
