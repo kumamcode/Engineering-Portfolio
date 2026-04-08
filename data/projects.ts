@@ -22,7 +22,7 @@ export const projects: Project[] = [
   // Robotics Projects
   {
     id: '14',
-    title: 'Fixed-Wing VTOL Hybrid Drone[In Progress]',
+    title: 'Fixed-Wing VTOL Drone for Whale Localization',
     category: 'Robotics',
     description: `This project focuses on the design and development of an autonomous fixed-wing VTOL hybrid drone for tracking VHF-tagged sperm whales in harsh marine environments.
 
@@ -30,16 +30,14 @@ Developed in collaboration with Project CETI and the Robotics, Embedded-Autonomy
 
 This work is ongoing as part of my undergraduate thesis, with continued validation through simulation, testing, and flight experiments.`,
     images: [
-      '/projects/Fixed_Wing_VTOL_Drone/View_8.png',
-      '/projects/Fixed_Wing_VTOL_Drone/view_1.JPG',
-      '/projects/Fixed_Wing_VTOL_Drone/view_2.png',
-      '/projects/Fixed_Wing_VTOL_Drone/View_3.png',
-      '/projects/Fixed_Wing_VTOL_Drone/View_4.png',
-      '/projects/Fixed_Wing_VTOL_Drone/View_6.png',
-      '/projects/Fixed_Wing_VTOL_Drone/View_7.png',
-      '/projects/Fixed_Wing_VTOL_Drone/View_9.png',
-      '/projects/Fixed_Wing_VTOL_Drone/DSC00433.JPG',
-      '/projects/Fixed_Wing_VTOL_Drone/DSC00493.JPG',
+      '/projects/Fixed_Wing_VTOL_Drone/sexy_render.jpg',
+      '/projects/Fixed_Wing_VTOL_Drone/outdoor.png',
+      '/projects/Fixed_Wing_VTOL_Drone/exploded view.png',
+      '/projects/Fixed_Wing_VTOL_Drone/underbelly_2.jpg',
+      '/projects/Fixed_Wing_VTOL_Drone/velocity_CFD.png',
+      '/projects/Fixed_Wing_VTOL_Drone/wing_pressure_CFD.png',
+      '/projects/Fixed_Wing_VTOL_Drone/Velocity_flow_trajectory.png',
+      '/projects/Fixed_Wing_VTOL_Drone/outdoor_docked.png',
     ],
     technologies: ['Autonomous Systems', 'Aerospace Engineering', 'VTOL', 'CAD', 'CFD Simulation', 'AeroSandbox', 'OpenVSP'],
     date: '2025',
